@@ -1,0 +1,102 @@
+:root {
+  --bg: #121213;
+  --secondary: #3a3a3c;
+  --primary: #818384;
+  --light: white;
+  --yellow: #f8c53a;
+  --green: #61a53f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--light);
+}
+
+header {
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--secondary);
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.expression {
+  position: relative;
+  font-size: 40px;
+  top: 75px;
+}
+
+.container {
+  width: 100%;
+  height: calc(100% - 56px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-container {
+  position: relative;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(5, 69px);
+  top: 100px;
+}
+
+.grid {
+  aspect-ratio: 1;
+  width: 65px;
+  background-color: var(--bg);
+  border: 2px solid var(--secondary);
+  text-align: center;
+  line-height: 65px;
+  font-size: 40px;
+}
+
+.keyboard {
+  position: relative;
+  display: flex;
+  margin-top: auto;
+  bottom: 10px;
+}
+
+.keyboard-key {
+  aspect-ratio: 1;
+  height: 45px;
+  background: var(--primary);
+  margin: 0 3px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 22px;
+  border: none;
+}
+
+#key-enter,
+#key-delete {
+  width: 80px;
+}
+
+.grid:not(:empty):not(.set) {
+  border-color: var(--primary);
+}
+
+.wrong-character {
+  background-color: var(--secondary);
+}
+
+.wrong-spot {
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+}
+
+.correct-spot {
+  background-color: var(--green);
+  border-color: var(--green);
+}
